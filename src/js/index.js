@@ -64,10 +64,16 @@ const getWeatherData = async (initialLoad = false) => {
       getWeatherDataByCoords(latitude, longitude)
     );
     const data = await weatherData.json();
-    input.value = "";
+
+    document.querySelector(".error-msg").style.visibility = "hidden";
+
+    document.querySelector("body").style.visibility = "visible";
 
     renderWeatherInfo(data, cityName);
-  } catch (err) {}
+  } catch (err) {
+    document.querySelector(".error-msg").style.visibility = "visible";
+  }
+  input.value = "";
 };
 
 getWeatherData(true);

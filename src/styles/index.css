@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -11,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -65,20 +65,10 @@ img {
   margin-left: 0.4rem;
 }
 
-.weather-info__units {
-  font-size: 0.82rem;
-  display: flex;
-  justify-content: right;
-  position: absolute;
-  right: 0;
-  top: 50px;
-}
-
 .weather-info__city {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: -0.5px;
-  margin-top: 1rem;
 }
 
 .none {
@@ -133,13 +123,11 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   row-gap: 20px;
   margin: 2rem 0;
-  /* align-self: center; */
   justify-items: center;
 }
 
 .weather-details {
   display: flex;
-  /* border: 1px solid red; */
 }
 
 .weather-details img {
@@ -159,7 +147,7 @@ section {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 560px) {
   .weather-info__description {
     font-size: 1.7rem;
   }
@@ -300,14 +288,17 @@ section {
   display: none;
   margin-top: 1.2rem;
 }
+
 .forecast-hourly-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
 }
 
 .forecast-hourly {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .forecast-hourly-time {
@@ -323,6 +314,203 @@ section {
 
 .forecast-hourly-icon {
   width: 35px;
+}
+
+.error-msg {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 560px) {
+  .daily-btn,
+  .hourly-btn {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .forecast-daily-container {
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .forecast-daily-day {
+    font-size: 0.85rem;
+  }
+
+  .forecast-daily-temp-max {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .forecast-daily-temp-min {
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .weather-daily-icon {
+    width: 25px;
+  }
+
+  .forecast-selected {
+    border: 2px solid #000;
+    border-radius: 4px;
+  }
+
+  .change-hours {
+    left: 7rem;
+    gap: 0.15rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .dot {
+    border: 1.5px solid #000;
+    width: 8px;
+    height: 8px;
+    margin-top: 0.7rem;
+  }
+
+  .change-hours__left,
+  .change-hours__right {
+    font-size: 2.2rem;
+  }
+
+  .forecast-hourly-main-container {
+    margin-top: 0.6rem;
+  }
+
+  .forecast-hourly-time {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .forecast-hourly-temp {
+    font-size: 1.35rem;
+    margin: 0.4rem 0 0.2rem 0;
+  }
+
+  .forecast-hourly-icon {
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .weather-info__description {
+    font-size: 1.5rem;
+  }
+
+  .weather-info__icon {
+    width: 65px;
+    height: 50px;
+  }
+
+  .weather-day-date,
+  .weather-time {
+    font-size: 0.9rem;
+  }
+
+  .weather-info__temperature {
+    font-size: 2rem;
+  }
+
+  .weather-info__city {
+    font-size: 1.4rem;
+  }
+
+  section {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .weather-details img {
+    width: 30px;
+  }
+
+  .weather-detail-data {
+    margin-left: 0.5rem;
+  }
+
+  .weather-detail-data h5 {
+    font-size: 0.7rem;
+  }
+  .weather-detail-data h4 {
+    font-size: 1.2rem;
+  }
+
+  .forecast-daily-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .forecast-daily {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .forecast-daily-day {
+    font-size: 1rem;
+  }
+
+  .forecast-daily-temp {
+    display: flex;
+    align-items: center;
+  }
+
+  .forecast-daily-temp-max {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .forecast-daily-temp-min {
+    font-size: 0.85rem;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+
+  .weather-daily-icon {
+    width: 30px;
+  }
+
+  .forecast-hourly-main-container {
+    margin-top: 1rem;
+  }
+
+  .forecast-hourly-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .forecast-hourly {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .forecast-hourly-time {
+    font-size: 1rem;
+  }
+
+  .forecast-hourly-temp {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .forecast-hourly-icon {
+    width: 30px;
+  }
+
+  .error-msg {
+    margin-top: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
 }
 
 #hourly-time-9,

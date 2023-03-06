@@ -22,22 +22,23 @@
 
           <div class="weather-info-right">
             <div class="weather-info__temperature"></div>
-            <div class="weather-info__units">
-              <div class="weather-info__units-f">Display °F</div>
-              <div class="weather-info__units-c none">Display °C</div>
-            </div>
             <div class="weather-info__city"></div>
-            <form class="form">
-              <input
-                class="search-input"
-                type="text"
-                placeholder="Search Location..."
-                required
-              />
-              <button class="search-btn" type="submit">
-                <img src="../src/svg/search.svg" alt="search" />
-              </button>
-            </form>
+            <div>
+              <form class="form">
+                <input
+                  class="search-input"
+                  type="text"
+                  placeholder="Search Location..."
+                  required
+                />
+                <button class="search-btn" type="submit">
+                  <img src="../src/svg/search.svg" alt="search" />
+                </button>
+              </form>
+              <div class="error-msg">
+                Location not found <br />Please type again.
+              </div>
+            </div>
           </div>
         </div>
       </main>
