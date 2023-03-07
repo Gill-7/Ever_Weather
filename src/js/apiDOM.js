@@ -21,40 +21,40 @@ function changeHoursPage(hoursPage) {
   });
 
   if (hoursPage === 1) {
-    document.querySelector("#hourly-time-1").style.display = "flex";
-    document.querySelector("#hourly-time-2").style.display = "flex";
-    document.querySelector("#hourly-time-3").style.display = "flex";
-    document.querySelector("#hourly-time-4").style.display = "flex";
-    document.querySelector("#hourly-time-5").style.display = "flex";
-    document.querySelector("#hourly-time-6").style.display = "flex";
-    document.querySelector("#hourly-time-7").style.display = "flex";
-    document.querySelector("#hourly-time-8").style.display = "flex";
+    document.querySelector("#hourly-time-1").style.display = "grid";
+    document.querySelector("#hourly-time-2").style.display = "grid";
+    document.querySelector("#hourly-time-3").style.display = "grid";
+    document.querySelector("#hourly-time-4").style.display = "grid";
+    document.querySelector("#hourly-time-5").style.display = "grid";
+    document.querySelector("#hourly-time-6").style.display = "grid";
+    document.querySelector("#hourly-time-7").style.display = "grid";
+    document.querySelector("#hourly-time-8").style.display = "grid";
 
     dot1.classList.add("dot-selected");
   }
 
   if (hoursPage === 2) {
-    document.querySelector("#hourly-time-9").style.display = "flex";
-    document.querySelector("#hourly-time-10").style.display = "flex";
-    document.querySelector("#hourly-time-11").style.display = "flex";
-    document.querySelector("#hourly-time-12").style.display = "flex";
-    document.querySelector("#hourly-time-13").style.display = "flex";
-    document.querySelector("#hourly-time-14").style.display = "flex";
-    document.querySelector("#hourly-time-15").style.display = "flex";
-    document.querySelector("#hourly-time-16").style.display = "flex";
+    document.querySelector("#hourly-time-9").style.display = "grid";
+    document.querySelector("#hourly-time-10").style.display = "grid";
+    document.querySelector("#hourly-time-11").style.display = "grid";
+    document.querySelector("#hourly-time-12").style.display = "grid";
+    document.querySelector("#hourly-time-13").style.display = "grid";
+    document.querySelector("#hourly-time-14").style.display = "grid";
+    document.querySelector("#hourly-time-15").style.display = "grid";
+    document.querySelector("#hourly-time-16").style.display = "grid";
 
     dot2.classList.add("dot-selected");
   }
 
   if (hoursPage === 3) {
-    document.querySelector("#hourly-time-17").style.display = "flex";
-    document.querySelector("#hourly-time-18").style.display = "flex";
-    document.querySelector("#hourly-time-19").style.display = "flex";
-    document.querySelector("#hourly-time-20").style.display = "flex";
-    document.querySelector("#hourly-time-21").style.display = "flex";
-    document.querySelector("#hourly-time-22").style.display = "flex";
-    document.querySelector("#hourly-time-23").style.display = "flex";
-    document.querySelector("#hourly-time-24").style.display = "flex";
+    document.querySelector("#hourly-time-17").style.display = "grid";
+    document.querySelector("#hourly-time-18").style.display = "grid";
+    document.querySelector("#hourly-time-19").style.display = "grid";
+    document.querySelector("#hourly-time-20").style.display = "grid";
+    document.querySelector("#hourly-time-21").style.display = "grid";
+    document.querySelector("#hourly-time-22").style.display = "grid";
+    document.querySelector("#hourly-time-23").style.display = "grid";
+    document.querySelector("#hourly-time-24").style.display = "grid";
 
     dot3.classList.add("dot-selected");
   }
@@ -85,7 +85,7 @@ function renderWeatherData(data, CityName) {
   weatherDate.textContent = formatDate(data.current.dt);
 
   const weatherTime = document.querySelector(".weather-time");
-  weatherTime.textContent = formatTime(data.current.dt);
+  weatherTime.textContent = formatTime(data.current.dt, data.timezone);
 
   const weatherIcon = document.querySelector(".weather-info__icon");
   weatherIcon.src = renderWeatherIcon(data.current.weather[0].icon);

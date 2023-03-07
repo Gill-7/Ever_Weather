@@ -280,8 +280,9 @@ section {
 
 .change-hours__left,
 .change-hours__right {
-  font-size: 2rem;
+  font-size: 2.3rem;
   cursor: pointer;
+  margin-bottom: 0.4rem;
 }
 
 .forecast-hourly-main-container {
@@ -303,13 +304,12 @@ section {
 
 .forecast-hourly-time {
   font-size: 0.95rem;
-  text-align: center;
 }
 
 .forecast-hourly-temp {
   font-size: 1.8rem;
   margin-top: 0.7rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .forecast-hourly-icon {

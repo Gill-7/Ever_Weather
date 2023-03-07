@@ -1,3 +1,5 @@
+//import fromUnixTime from "date-fns/fromUnixTime";
+
 function capitalize(words) {
   const seperatedWord = words.toLowerCase().split(" ");
   for (let i = 0; i < seperatedWord.length; i++) {
@@ -82,8 +84,10 @@ function getMonth(num) {
   return month;
 }
 
-function formatTime(unix, timeFormat = "full") {
+function formatTime(unix, timezone, timeFormat = "full") {
   const todayDate = new Date(unix * 1000);
+  // const formatTime = formatInTimeZone(todayDate, timezone);
+  //console.log(formatTime);
   const hours = todayDate.getHours();
   let time;
   if (hours >= 12) {
@@ -98,7 +102,7 @@ function formatTime(unix, timeFormat = "full") {
   }
   return `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
-    .padStart(2, "0")}${time}`;
+    .padStart(2, "0")} ${time}`;
 }
 
 function formatDate(unix, dateFormat = "full") {
