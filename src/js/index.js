@@ -25,6 +25,8 @@ const dots = document.querySelectorAll(".dot");
 
 let hoursPage = 1;
 
+document.querySelector("body").style.visibility = "hidden";
+
 function getPosition() {
   return new Promise((resolve) => {
     if (navigator.geolocation) {

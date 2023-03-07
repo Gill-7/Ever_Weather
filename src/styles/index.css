@@ -11,7 +11,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 img {
@@ -319,7 +319,7 @@ section {
 .error-msg {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  visibility: visible;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 560px) {
