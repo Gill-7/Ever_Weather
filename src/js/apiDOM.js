@@ -82,10 +82,10 @@ function renderWeatherData(data, CityName) {
   weatherInfoTemperature.textContent = `${Math.round(data.current.temp)} °c`;
 
   const weatherDate = document.querySelector(".weather-day-date");
-  weatherDate.textContent = formatDate(data.current.dt);
+  weatherDate.textContent = formatDate(data.current.dt, data.timezone_offset);
 
   const weatherTime = document.querySelector(".weather-time");
-  weatherTime.textContent = formatTime(data.current.dt, data.timezone);
+  weatherTime.textContent = formatTime(data.current.dt, data.timezone_offset);
 
   const weatherIcon = document.querySelector(".weather-info__icon");
   weatherIcon.src = renderWeatherIcon(data.current.weather[0].icon);
@@ -134,25 +134,53 @@ function displayHourlyForecast() {
 function renderDailyForecast(data) {
   /*  RENDER DAILY DAYS  */
   const firstDay = document.querySelector("#first-day .forecast-daily-day");
-  firstDay.textContent = `${formatDate(data.daily[0].dt, "day")}`;
+  firstDay.textContent = `${formatDate(
+    data.daily[0].dt,
+    data.timezone_offset,
+    "day"
+  )}`;
 
   const secondDay = document.querySelector("#second-day .forecast-daily-day");
-  secondDay.textContent = formatDate(data.daily[1].dt, "day");
+  secondDay.textContent = formatDate(
+    data.daily[1].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const thirdDay = document.querySelector("#third-day .forecast-daily-day");
-  thirdDay.textContent = formatDate(data.daily[2].dt, "day");
+  thirdDay.textContent = formatDate(
+    data.daily[2].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const fourthDay = document.querySelector("#fourth-day .forecast-daily-day");
-  fourthDay.textContent = formatDate(data.daily[3].dt, "day");
+  fourthDay.textContent = formatDate(
+    data.daily[3].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const fifthDay = document.querySelector("#fifth-day .forecast-daily-day");
-  fifthDay.textContent = formatDate(data.daily[4].dt, "day");
+  fifthDay.textContent = formatDate(
+    data.daily[4].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const sixthDay = document.querySelector("#sixth-day .forecast-daily-day");
-  sixthDay.textContent = formatDate(data.daily[5].dt, "day");
+  sixthDay.textContent = formatDate(
+    data.daily[5].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const seventhDay = document.querySelector("#seventh-day .forecast-daily-day");
-  seventhDay.textContent = formatDate(data.daily[6].dt, "day");
+  seventhDay.textContent = formatDate(
+    data.daily[6].dt,
+    data.timezone_offset,
+    "day"
+  );
 
   /*  RENDER DAILY MAX TEMP  */
 
@@ -257,122 +285,218 @@ function renderHourlyForecast(data) {
   const hourlyTime1 = document.querySelector(
     "#hourly-time-1 .forecast-hourly-time"
   );
-  hourlyTime1.textContent = formatTime(data.hourly[0].dt, "hour");
+  hourlyTime1.textContent = formatTime(
+    data.hourly[0].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime2 = document.querySelector(
     "#hourly-time-2 .forecast-hourly-time"
   );
-  hourlyTime2.textContent = formatTime(data.hourly[1].dt, "hour");
+  hourlyTime2.textContent = formatTime(
+    data.hourly[1].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime3 = document.querySelector(
     "#hourly-time-3 .forecast-hourly-time"
   );
-  hourlyTime3.textContent = formatTime(data.hourly[2].dt, "hour");
+  hourlyTime3.textContent = formatTime(
+    data.hourly[2].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime4 = document.querySelector(
     "#hourly-time-4 .forecast-hourly-time"
   );
-  hourlyTime4.textContent = formatTime(data.hourly[3].dt, "hour");
+  hourlyTime4.textContent = formatTime(
+    data.hourly[3].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime5 = document.querySelector(
     "#hourly-time-5 .forecast-hourly-time"
   );
-  hourlyTime5.textContent = formatTime(data.hourly[4].dt, "hour");
+  hourlyTime5.textContent = formatTime(
+    data.hourly[4].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime6 = document.querySelector(
     "#hourly-time-6 .forecast-hourly-time"
   );
-  hourlyTime6.textContent = formatTime(data.hourly[5].dt, "hour");
+  hourlyTime6.textContent = formatTime(
+    data.hourly[5].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime7 = document.querySelector(
     "#hourly-time-7 .forecast-hourly-time"
   );
-  hourlyTime7.textContent = formatTime(data.hourly[6].dt, "hour");
+  hourlyTime7.textContent = formatTime(
+    data.hourly[6].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime8 = document.querySelector(
     "#hourly-time-8 .forecast-hourly-time"
   );
-  hourlyTime8.textContent = formatTime(data.hourly[7].dt, "hour");
+  hourlyTime8.textContent = formatTime(
+    data.hourly[7].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime9 = document.querySelector(
     "#hourly-time-9 .forecast-hourly-time"
   );
-  hourlyTime9.textContent = formatTime(data.hourly[8].dt, "hour");
+  hourlyTime9.textContent = formatTime(
+    data.hourly[8].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime10 = document.querySelector(
     "#hourly-time-10 .forecast-hourly-time"
   );
-  hourlyTime10.textContent = formatTime(data.hourly[9].dt, "hour");
+  hourlyTime10.textContent = formatTime(
+    data.hourly[9].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime11 = document.querySelector(
     "#hourly-time-11 .forecast-hourly-time"
   );
-  hourlyTime11.textContent = formatTime(data.hourly[10].dt, "hour");
+  hourlyTime11.textContent = formatTime(
+    data.hourly[10].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime12 = document.querySelector(
     "#hourly-time-12 .forecast-hourly-time"
   );
-  hourlyTime12.textContent = formatTime(data.hourly[11].dt, "hour");
+  hourlyTime12.textContent = formatTime(
+    data.hourly[11].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime13 = document.querySelector(
     "#hourly-time-13 .forecast-hourly-time"
   );
-  hourlyTime13.textContent = formatTime(data.hourly[12].dt, "hour");
+  hourlyTime13.textContent = formatTime(
+    data.hourly[12].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime14 = document.querySelector(
     "#hourly-time-14 .forecast-hourly-time"
   );
-  hourlyTime14.textContent = formatTime(data.hourly[13].dt, "hour");
+  hourlyTime14.textContent = formatTime(
+    data.hourly[13].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime15 = document.querySelector(
     "#hourly-time-15 .forecast-hourly-time"
   );
-  hourlyTime15.textContent = formatTime(data.hourly[14].dt, "hour");
+  hourlyTime15.textContent = formatTime(
+    data.hourly[14].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime16 = document.querySelector(
     "#hourly-time-16 .forecast-hourly-time"
   );
-  hourlyTime16.textContent = formatTime(data.hourly[15].dt, "hour");
+  hourlyTime16.textContent = formatTime(
+    data.hourly[15].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime17 = document.querySelector(
     "#hourly-time-17 .forecast-hourly-time"
   );
-  hourlyTime17.textContent = formatTime(data.hourly[16].dt, "hour");
+  hourlyTime17.textContent = formatTime(
+    data.hourly[16].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime18 = document.querySelector(
     "#hourly-time-18 .forecast-hourly-time"
   );
-  hourlyTime18.textContent = formatTime(data.hourly[17].dt, "hour");
+  hourlyTime18.textContent = formatTime(
+    data.hourly[17].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime19 = document.querySelector(
     "#hourly-time-19 .forecast-hourly-time"
   );
-  hourlyTime19.textContent = formatTime(data.hourly[18].dt, "hour");
+  hourlyTime19.textContent = formatTime(
+    data.hourly[18].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime20 = document.querySelector(
     "#hourly-time-20 .forecast-hourly-time"
   );
-  hourlyTime20.textContent = formatTime(data.hourly[19].dt, "hour");
+  hourlyTime20.textContent = formatTime(
+    data.hourly[19].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime21 = document.querySelector(
     "#hourly-time-21 .forecast-hourly-time"
   );
-  hourlyTime21.textContent = formatTime(data.hourly[20].dt, "hour");
+  hourlyTime21.textContent = formatTime(
+    data.hourly[20].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime22 = document.querySelector(
     "#hourly-time-22 .forecast-hourly-time"
   );
-  hourlyTime22.textContent = formatTime(data.hourly[21].dt, "hour");
+  hourlyTime22.textContent = formatTime(
+    data.hourly[21].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime23 = document.querySelector(
     "#hourly-time-23 .forecast-hourly-time"
   );
-  hourlyTime23.textContent = formatTime(data.hourly[22].dt, "hour");
+  hourlyTime23.textContent = formatTime(
+    data.hourly[22].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   const hourlyTime24 = document.querySelector(
     "#hourly-time-24 .forecast-hourly-time"
   );
-  hourlyTime24.textContent = formatTime(data.hourly[23].dt, "hour");
+  hourlyTime24.textContent = formatTime(
+    data.hourly[23].dt,
+    data.timezone_offset,
+    "hour"
+  );
 
   // RENDER HOURLY TEMP
   const hourlyTemp1 = document.querySelector(

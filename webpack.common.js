@@ -4,14 +4,7 @@ const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./src/js/index.js",
-  output: {
-    filename: "index_bundle.js",
-    path: __dirname + "/dist",
-    clean: true,
-    assetModuleFilename: "assets/[name][ext]",
-  },
   devtool: "source-map",
   plugins: [
     new HtmlWebpackPlugin({
@@ -25,7 +18,6 @@ module.exports = {
       patterns: [{ from: "src/svg", to: "assets" }],
     }),
   ],
-  devtool: "source-map",
   module: {
     rules: [
       {

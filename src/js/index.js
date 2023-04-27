@@ -5,6 +5,8 @@ import {
   getWeatherDataByCoords,
 } from "./apiFunction.js";
 
+import "../styles/index.css";
+
 import {
   renderWeatherInfo,
   displayDailyForecast,
