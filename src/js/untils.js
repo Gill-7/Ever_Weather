@@ -118,7 +118,6 @@ function formatTime(unix, offset, timeFormat = "full") {
 
 function formatDate(unix, offset, dateFormat = "full") {
   const date = fromUnixTime(unix + offset).toUTCString();
-  console.log(date); // Wed, 26 Apr 2023 14:25:41 GMT
   let dayOfWeek = date.slice(0, 3);
   let dayOfMonth = date.slice(5, 7);
   const month = date.slice(8, 11);

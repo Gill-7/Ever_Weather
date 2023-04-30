@@ -61,8 +61,6 @@ function changeHoursPage(hoursPage) {
 }
 
 function renderWeatherData(data, CityName) {
-  console.log(data);
-
   // update the weather description
   const weatherInfoDescription = document.querySelector(
     ".weather-info__description"
