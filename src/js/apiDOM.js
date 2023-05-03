@@ -80,7 +80,11 @@ function renderWeatherData(data, CityName) {
   weatherInfoTemperature.textContent = `${Math.round(data.current.temp)} °c`;
 
   const weatherDate = document.querySelector(".weather-day-date");
-  weatherDate.textContent = formatDate(data.current.dt, data.timezone_offset);
+  weatherDate.textContent = formatDate(
+    data.current.dt,
+    data.timezone_offset,
+    "day"
+  );
 
   const weatherTime = document.querySelector(".weather-time");
   weatherTime.textContent = formatTime(data.current.dt, data.timezone_offset);
@@ -134,51 +138,26 @@ function renderDailyForecast(data) {
   const firstDay = document.querySelector("#first-day .forecast-daily-day");
   firstDay.textContent = `${formatDate(
     data.daily[0].dt,
-    data.timezone_offset,
-    "day"
+    data.timezone_offset
   )}`;
 
   const secondDay = document.querySelector("#second-day .forecast-daily-day");
-  secondDay.textContent = formatDate(
-    data.daily[1].dt,
-    data.timezone_offset,
-    "day"
-  );
+  secondDay.textContent = formatDate(data.daily[1].dt, data.timezone_offset);
 
   const thirdDay = document.querySelector("#third-day .forecast-daily-day");
-  thirdDay.textContent = formatDate(
-    data.daily[2].dt,
-    data.timezone_offset,
-    "day"
-  );
+  thirdDay.textContent = formatDate(data.daily[2].dt, data.timezone_offset);
 
   const fourthDay = document.querySelector("#fourth-day .forecast-daily-day");
-  fourthDay.textContent = formatDate(
-    data.daily[3].dt,
-    data.timezone_offset,
-    "day"
-  );
+  fourthDay.textContent = formatDate(data.daily[3].dt, data.timezone_offset);
 
   const fifthDay = document.querySelector("#fifth-day .forecast-daily-day");
-  fifthDay.textContent = formatDate(
-    data.daily[4].dt,
-    data.timezone_offset,
-    "day"
-  );
+  fifthDay.textContent = formatDate(data.daily[4].dt, data.timezone_offset);
 
   const sixthDay = document.querySelector("#sixth-day .forecast-daily-day");
-  sixthDay.textContent = formatDate(
-    data.daily[5].dt,
-    data.timezone_offset,
-    "day"
-  );
+  sixthDay.textContent = formatDate(data.daily[5].dt, data.timezone_offset);
 
   const seventhDay = document.querySelector("#seventh-day .forecast-daily-day");
-  seventhDay.textContent = formatDate(
-    data.daily[6].dt,
-    data.timezone_offset,
-    "day"
-  );
+  seventhDay.textContent = formatDate(data.daily[6].dt, data.timezone_offset);
 
   /*  RENDER DAILY MAX TEMP  */
 
