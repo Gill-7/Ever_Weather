@@ -77,7 +77,7 @@ function renderWeatherData(data, CityName) {
   const weatherInfoTemperature = document.querySelector(
     ".weather-info__temperature"
   );
-  weatherInfoTemperature.textContent = `${Math.round(data.current.temp)} °c`;
+  weatherInfoTemperature.textContent = `${Math.round(data.current.temp)} °C`;
 
   const weatherDate = document.querySelector(".weather-day-date");
   weatherDate.textContent = formatDate(
@@ -164,74 +164,74 @@ function renderDailyForecast(data) {
   const firstMaxTemp = document.querySelector(
     "#first-day .forecast-daily-temp-max"
   );
-  firstMaxTemp.textContent = `${Math.round(data.daily[0].temp.max)}°C`;
+  firstMaxTemp.textContent = `${Math.round(data.daily[0].temp.max)} °C`;
 
   const secondMaxTemp = document.querySelector(
     "#second-day .forecast-daily-temp-max"
   );
-  secondMaxTemp.textContent = `${Math.round(data.daily[1].temp.max)}°C`;
+  secondMaxTemp.textContent = `${Math.round(data.daily[1].temp.max)} °C`;
 
   const thirdMaxTemp = document.querySelector(
     "#third-day .forecast-daily-temp-max"
   );
-  thirdMaxTemp.textContent = `${Math.round(data.daily[2].temp.max)}°C`;
+  thirdMaxTemp.textContent = `${Math.round(data.daily[2].temp.max)} °C`;
 
   const fourthMaxTemp = document.querySelector(
     "#fourth-day .forecast-daily-temp-max"
   );
-  fourthMaxTemp.textContent = `${Math.round(data.daily[3].temp.max)}°C`;
+  fourthMaxTemp.textContent = `${Math.round(data.daily[3].temp.max)} °C`;
 
   const fifthMaxTemp = document.querySelector(
     "#fifth-day .forecast-daily-temp-max"
   );
-  fifthMaxTemp.textContent = `${Math.round(data.daily[4].temp.max)}°C`;
+  fifthMaxTemp.textContent = `${Math.round(data.daily[4].temp.max)} °C`;
 
   const sixthMaxTemp = document.querySelector(
     "#sixth-day .forecast-daily-temp-max"
   );
-  sixthMaxTemp.textContent = `${Math.round(data.daily[5].temp.max)}°C`;
+  sixthMaxTemp.textContent = `${Math.round(data.daily[5].temp.max)} °C`;
 
   const seventhMaxTemp = document.querySelector(
     "#seventh-day .forecast-daily-temp-max"
   );
-  seventhMaxTemp.textContent = `${Math.round(data.daily[6].temp.max)}°C`;
+  seventhMaxTemp.textContent = `${Math.round(data.daily[6].temp.max)} °C`;
 
   /*  RENDER DAILY MIN TEMP  */
 
   const firstMinTemp = document.querySelector(
     "#first-day .forecast-daily-temp-min"
   );
-  firstMinTemp.textContent = `${Math.round(data.daily[0].temp.min)}°C`;
+  firstMinTemp.textContent = `${Math.round(data.daily[0].temp.min)} °C`;
 
   const secondMinTemp = document.querySelector(
     "#second-day .forecast-daily-temp-min"
   );
-  secondMinTemp.textContent = `${Math.round(data.daily[1].temp.min)}°C`;
+  secondMinTemp.textContent = `${Math.round(data.daily[1].temp.min)} °C`;
 
   const thirdMinTemp = document.querySelector(
     "#third-day .forecast-daily-temp-min"
   );
-  thirdMinTemp.textContent = `${Math.round(data.daily[2].temp.min)}°C`;
+  thirdMinTemp.textContent = `${Math.round(data.daily[2].temp.min)} °C`;
 
   const fourthMinTemp = document.querySelector(
     "#fourth-day .forecast-daily-temp-min"
   );
-  fourthMinTemp.textContent = `${Math.round(data.daily[3].temp.min)}°C`;
+  fourthMinTemp.textContent = `${Math.round(data.daily[3].temp.min)} °C`;
 
   const fifthMinTemp = document.querySelector(
     "#fifth-day .forecast-daily-temp-min"
   );
-  fifthMinTemp.textContent = `${Math.round(data.daily[4].temp.min)}°C`;
+  fifthMinTemp.textContent = `${Math.round(data.daily[4].temp.min)} °C`;
 
   const sixthMinTemp = document.querySelector(
     "#sixth-day .forecast-daily-temp-min"
   );
-  sixthMinTemp.textContent = `${Math.round(data.daily[5].temp.min)}°C`;
+  sixthMinTemp.textContent = `${Math.round(data.daily[5].temp.min)} °C`;
 
   const seventhMinTemp = document.querySelector(
     "#seventh-day .forecast-daily-temp-min"
   );
-  seventhMinTemp.textContent = `${Math.round(data.daily[6].temp.min)}°C`;
+  seventhMinTemp.textContent = `${Math.round(data.daily[6].temp.min)} °C`;
 
   /*  RENDER DAILY WEATHER ICON  */
 
@@ -479,122 +479,122 @@ function renderHourlyForecast(data) {
   const hourlyTemp1 = document.querySelector(
     "#hourly-time-1 .forecast-hourly-temp"
   );
-  hourlyTemp1.textContent = `${Math.round(data.hourly[0].temp)}°C`;
+  hourlyTemp1.textContent = `${Math.round(data.hourly[0].temp)} °C`;
 
   const hourlyTemp2 = document.querySelector(
     "#hourly-time-2 .forecast-hourly-temp"
   );
-  hourlyTemp2.textContent = `${Math.round(data.hourly[1].temp)}°C`;
+  hourlyTemp2.textContent = `${Math.round(data.hourly[1].temp)} °C`;
 
   const hourlyTemp3 = document.querySelector(
     "#hourly-time-3 .forecast-hourly-temp"
   );
-  hourlyTemp3.textContent = `${Math.round(data.hourly[2].temp)}°C`;
+  hourlyTemp3.textContent = `${Math.round(data.hourly[2].temp)} °C`;
 
   const hourlyTemp4 = document.querySelector(
     "#hourly-time-4 .forecast-hourly-temp"
   );
-  hourlyTemp4.textContent = `${Math.round(data.hourly[3].temp)}°C`;
+  hourlyTemp4.textContent = `${Math.round(data.hourly[3].temp)} °C`;
 
   const hourlyTemp5 = document.querySelector(
     "#hourly-time-5 .forecast-hourly-temp"
   );
-  hourlyTemp5.textContent = `${Math.round(data.hourly[4].temp)}°C`;
+  hourlyTemp5.textContent = `${Math.round(data.hourly[4].temp)} °C`;
 
   const hourlyTemp6 = document.querySelector(
     "#hourly-time-6 .forecast-hourly-temp"
   );
-  hourlyTemp6.textContent = `${Math.round(data.hourly[5].temp)}°C`;
+  hourlyTemp6.textContent = `${Math.round(data.hourly[5].temp)} °C`;
 
   const hourlyTemp7 = document.querySelector(
     "#hourly-time-7 .forecast-hourly-temp"
   );
-  hourlyTemp7.textContent = `${Math.round(data.hourly[6].temp)}°C`;
+  hourlyTemp7.textContent = `${Math.round(data.hourly[6].temp)} °C`;
 
   const hourlyTemp8 = document.querySelector(
     "#hourly-time-8 .forecast-hourly-temp"
   );
-  hourlyTemp8.textContent = `${Math.round(data.hourly[7].temp)}°C`;
+  hourlyTemp8.textContent = `${Math.round(data.hourly[7].temp)} °C`;
 
   const hourlyTemp9 = document.querySelector(
     "#hourly-time-9 .forecast-hourly-temp"
   );
-  hourlyTemp9.textContent = `${Math.round(data.hourly[8].temp)}°C`;
+  hourlyTemp9.textContent = `${Math.round(data.hourly[8].temp)} °C`;
 
   const hourlyTemp10 = document.querySelector(
     "#hourly-time-10 .forecast-hourly-temp"
   );
-  hourlyTemp10.textContent = `${Math.round(data.hourly[9].temp)}°C`;
+  hourlyTemp10.textContent = `${Math.round(data.hourly[9].temp)} °C`;
 
   const hourlyTemp11 = document.querySelector(
     "#hourly-time-11 .forecast-hourly-temp"
   );
-  hourlyTemp11.textContent = `${Math.round(data.hourly[10].temp)}°C`;
+  hourlyTemp11.textContent = `${Math.round(data.hourly[10].temp)} °C`;
 
   const hourlyTemp12 = document.querySelector(
     "#hourly-time-12 .forecast-hourly-temp"
   );
-  hourlyTemp12.textContent = `${Math.round(data.hourly[11].temp)}°C`;
+  hourlyTemp12.textContent = `${Math.round(data.hourly[11].temp)} °C`;
 
   const hourlyTemp13 = document.querySelector(
     "#hourly-time-13 .forecast-hourly-temp"
   );
-  hourlyTemp13.textContent = `${Math.round(data.hourly[12].temp)}°C`;
+  hourlyTemp13.textContent = `${Math.round(data.hourly[12].temp)} °C`;
 
   const hourlyTemp14 = document.querySelector(
     "#hourly-time-14 .forecast-hourly-temp"
   );
-  hourlyTemp14.textContent = `${Math.round(data.hourly[13].temp)}°C`;
+  hourlyTemp14.textContent = `${Math.round(data.hourly[13].temp)} °C`;
 
   const hourlyTemp15 = document.querySelector(
     "#hourly-time-15 .forecast-hourly-temp"
   );
-  hourlyTemp15.textContent = `${Math.round(data.hourly[14].temp)}°C`;
+  hourlyTemp15.textContent = `${Math.round(data.hourly[14].temp)} °C`;
 
   const hourlyTemp16 = document.querySelector(
     "#hourly-time-16 .forecast-hourly-temp"
   );
-  hourlyTemp16.textContent = `${Math.round(data.hourly[15].temp)}°C`;
+  hourlyTemp16.textContent = `${Math.round(data.hourly[15].temp)} °C`;
 
   const hourlyTemp17 = document.querySelector(
     "#hourly-time-17 .forecast-hourly-temp"
   );
-  hourlyTemp17.textContent = `${Math.round(data.hourly[16].temp)}°C`;
+  hourlyTemp17.textContent = `${Math.round(data.hourly[16].temp)} °C`;
 
   const hourlyTemp18 = document.querySelector(
     "#hourly-time-18 .forecast-hourly-temp"
   );
-  hourlyTemp18.textContent = `${Math.round(data.hourly[17].temp)}°C`;
+  hourlyTemp18.textContent = `${Math.round(data.hourly[17].temp)} °C`;
 
   const hourlyTemp19 = document.querySelector(
     "#hourly-time-19 .forecast-hourly-temp"
   );
-  hourlyTemp19.textContent = `${Math.round(data.hourly[18].temp)}°C`;
+  hourlyTemp19.textContent = `${Math.round(data.hourly[18].temp)} °C`;
 
   const hourlyTemp20 = document.querySelector(
     "#hourly-time-20 .forecast-hourly-temp"
   );
-  hourlyTemp20.textContent = `${Math.round(data.hourly[19].temp)}°C`;
+  hourlyTemp20.textContent = `${Math.round(data.hourly[19].temp)} °C`;
 
   const hourlyTemp21 = document.querySelector(
     "#hourly-time-21 .forecast-hourly-temp"
   );
-  hourlyTemp21.textContent = `${Math.round(data.hourly[20].temp)}°C`;
+  hourlyTemp21.textContent = `${Math.round(data.hourly[20].temp)} °C`;
 
   const hourlyTemp22 = document.querySelector(
     "#hourly-time-22 .forecast-hourly-temp"
   );
-  hourlyTemp22.textContent = `${Math.round(data.hourly[21].temp)}°C`;
+  hourlyTemp22.textContent = `${Math.round(data.hourly[21].temp)} °C`;
 
   const hourlyTemp23 = document.querySelector(
     "#hourly-time-23 .forecast-hourly-temp"
   );
-  hourlyTemp23.textContent = `${Math.round(data.hourly[22].temp)}°C`;
+  hourlyTemp23.textContent = `${Math.round(data.hourly[22].temp)} °C`;
 
   const hourlyTemp24 = document.querySelector(
     "#hourly-time-24 .forecast-hourly-temp"
   );
-  hourlyTemp24.textContent = `${Math.round(data.hourly[23].temp)}°C`;
+  hourlyTemp24.textContent = `${Math.round(data.hourly[23].temp)} °C`;
 
   // RENDER HOURLY ICON
   const hourlyIcon1 = document.querySelector(
