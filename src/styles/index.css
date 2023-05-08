@@ -148,7 +148,7 @@ section {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
   .weather-info__description {
     font-size: 1.7rem;
   }
@@ -363,7 +363,7 @@ section {
   visibility: hidden;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
   .daily-btn,
   .hourly-btn {
     font-size: 0.8rem;
