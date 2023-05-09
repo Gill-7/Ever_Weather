@@ -8,9 +8,8 @@
 body {
   background-image: url(../svg/weather.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   min-height: 100vh;
   height: 100%;
   overflow-y: scroll;
