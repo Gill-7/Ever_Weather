@@ -12,6 +12,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 img {
@@ -242,7 +244,7 @@ section {
   }
 
   .weather-info__city {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
