@@ -113,7 +113,7 @@ function formatTime(unix, offset, timeFormat = "full") {
     return `${hour} ${time}`;
   }
 
-  return `${hour}:${minute} ${time}`;
+  return `${hour}:${minute}${time}`;
 }
 
 function formatDate(unix, offset, dateFormat = "full") {
@@ -122,7 +122,6 @@ function formatDate(unix, offset, dateFormat = "full") {
   let dayOfWeek = date.slice(0, 3);
   let dayOfMonth = date.slice(5, 7);
   const month = date.slice(8, 11);
-  const year = date.slice(14, 16);
   let suffix;
 
   if (dayOfMonth < 10) {
@@ -148,7 +147,7 @@ function formatDate(unix, offset, dateFormat = "full") {
     return dayOfWeek;
   }
 
-  const formatDate = `${dayOfWeek}, ${dayOfMonth}${suffix} ${month} ${year}`;
+  const formatDate = `${dayOfWeek}, ${dayOfMonth}${suffix} ${month}`;
   return formatDate;
 }
 

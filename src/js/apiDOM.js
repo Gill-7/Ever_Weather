@@ -96,13 +96,13 @@ function renderWeatherData(data, CityName) {
   weatherFeelslike.textContent = `${Math.round(data.current.feels_like)} °C`;
 
   const weatherWindSpeed = document.querySelector(".weather-speed");
-  weatherWindSpeed.textContent = `${Math.round(data.current.wind_speed)}km/h`;
+  weatherWindSpeed.textContent = `${Math.round(data.current.wind_speed)} km/h`;
 
   const weatherHumidity = document.querySelector(".weather-humidity");
-  weatherHumidity.textContent = `${Math.round(data.current.humidity)}%`;
+  weatherHumidity.textContent = `${Math.round(data.current.humidity)} %`;
 
   const weatherPrecp = document.querySelector(".weather-precp");
-  weatherPrecp.textContent = `${Math.round(data.daily[0].pop * 100)}%`;
+  weatherPrecp.textContent = `${Math.round(data.daily[0].pop * 100)} %`;
 }
 
 function displayDailyForecast() {
