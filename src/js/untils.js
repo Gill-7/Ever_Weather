@@ -147,7 +147,7 @@ function formatDate(unix, offset, dateFormat = "full") {
     return dayOfWeek;
   }
 
-  const formatDate = `${dayOfWeek}, ${dayOfMonth}${suffix} ${month}`;
+  const formatDate = `${dayOfWeek}, ${dayOfMonth}${suffix} ${month},`;
   return formatDate;
 }
 

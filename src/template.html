@@ -11,16 +11,21 @@
       <main>
         <div class="weather-info">
           <div class="weather-info-left">
-            <div class="weather-info__description"></div>
-            <img inline class="weather-info__icon" />
+            <div class="weather-temp-container">
+              <div class="weather-info__temperature"></div>
+              <span class="weather-info__degree">°</span>
+              <span class="weather-info__celcius">c</span>
+            </div>
+            <div class="weather-info__temperature"></div>
+            <div class="weather-info__city"></div>
             <div class="weather-date">
               <div class="weather-day-date"></div>
               <div class="weather-time"></div>
             </div>
           </div>
           <div class="weather-info-right">
-            <div class="weather-info__temperature"></div>
-            <div class="weather-info__city"></div>
+            <img inline class="weather-info__icon" />
+            <div class="weather-info__description"></div>
             <div>
               <form class="form">
                 <input
@@ -100,14 +105,11 @@
             <h4 class="weather-precp"></h4>
           </div>
         </div>
-        <!-- <div class="weather-temp_max">5.64</div>
-        <div class="weather-temp_min">3.98</div>
-        <div class="weather-pressure">1001</div> -->
       </section>
       <div class="forecast">
         <div class="change-forecast">
-          <div class="daily-btn forecast-selected">Daily</div>
-          <div class="hourly-btn">Hourly</div>
+          <p class="daily-btn forecast-selected">Daily</p>
+          <p class="hourly-btn">Hourly</p>
           <div class="change-hours">
             <div class="change-hours__left">&#8249;</div>
             <div class="dot dot1 dot-selected" data-dot="1"></div>
@@ -120,6 +122,7 @@
         <div class="forecast-daily-container">
           <div class="forecast-daily" id="first-day">
             <div class="forecast-daily-day"></div>
+
             <div class="forecast-daily-temp">
               <div class="forecast-daily-temp-max"></div>
               <div class="forecast-daily-temp-min"></div>

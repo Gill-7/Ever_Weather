@@ -77,7 +77,7 @@ function renderWeatherData(data, CityName) {
   const weatherInfoTemperature = document.querySelector(
     ".weather-info__temperature"
   );
-  weatherInfoTemperature.textContent = `${Math.round(data.current.temp)} °C`;
+  weatherInfoTemperature.textContent = `${Math.round(data.current.temp)}`;
 
   const weatherDate = document.querySelector(".weather-day-date");
   weatherDate.textContent = formatDate(
