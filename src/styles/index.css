@@ -598,19 +598,19 @@ section {
 
   .weather-info__celcius {
     font-size: 1.4rem;
-    top: 0.95rem;
+    top: 0.92rem;
     left: 2.75rem;
     font-weight: 400;
   }
 
   .weather-info__city {
-    font-size: 1.1rem;
-    margin-top: -0.1rem;
+    font-size: 1.15rem;
+    margin-top: 0;
   }
 
   .weather-date {
-    font-size: 0.7rem;
-    margin-top: 0.45rem;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .weather-time {
@@ -618,16 +618,17 @@ section {
   }
 
   .weather-info__description {
-    font-size: 1.1rem;
-    margin-top: -0.13rem;
+    font-size: 1.15rem;
+    margin-top: -0.1rem;
     margin-right: 0;
   }
 
   .weather-info__icon {
     width: 60px;
     height: 42px;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
   }
+
   .form {
     margin-top: 0rem;
   }
@@ -636,7 +637,7 @@ section {
     font-size: 0.68rem;
     padding: 0.5rem 1rem 0.1rem 0;
     border-bottom: 0.4px solid #414141;
-    min-width: 120px;
+    min-width: 125px;
   }
 
   form input::placeholder {
@@ -656,13 +657,13 @@ section {
 
   section {
     grid-template-columns: 1fr 1fr;
-    margin: 1rem 0 2.8rem 0;
+    margin: 1.5rem 0 3.5rem 0;
   }
 
   .weather-details .img2Svg {
-    width: 25px;
-    height: 30px;
-    margin-top: 0.2rem;
+    width: 28px;
+    height: 25px;
+    margin-top: 0.35rem;
   }
 
   .weather-detail-data {
@@ -670,14 +671,14 @@ section {
   }
 
   .weather-detail-data h5 {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     min-width: 75px;
   }
 
   .weather-detail-data h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
-    margin-top: 0.8rem;
+    margin-top: 1.1rem;
   }
 
   .weather-details:last-of-type {
@@ -701,7 +702,7 @@ section {
   .daily-btn,
   .hourly-btn {
     font-size: 0.75rem;
-    padding: 0.18rem 0.6rem 0.26rem 0.6rem;
+    padding: 0.18rem 0.6rem 0.24rem 0.6rem;
   }
 
   .change-hours__left,
@@ -722,19 +723,19 @@ section {
   }
 
   .dot1 {
-    left: 1.3rem;
+    left: 1.2rem;
   }
 
   .dot2 {
-    left: 2.1rem;
+    left: 1.9rem;
   }
 
   .dot3 {
-    left: 2.9rem;
+    left: 2.7rem;
   }
 
   .change-hours__right {
-    left: 3.6rem;
+    left: 3.4rem;
   }
 
   .error-msg {
@@ -743,7 +744,7 @@ section {
   }
 
   .forecast-selected {
-    border: 0.5px solid #000;
+    border: 0.7px solid #000;
     border-radius: 3px;
   }
 
@@ -752,7 +753,7 @@ section {
   }
 
   .forecast-daily-day {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1px;
   }
 
@@ -761,11 +762,11 @@ section {
   }
 
   .forecast-daily-temp-max {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .forecast-daily-temp-min {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     margin-left: 7px;
     margin-top: 11px;
   }
@@ -780,11 +781,11 @@ section {
   }
 
   .forecast-hourly-time {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .forecast-hourly-temp {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 
