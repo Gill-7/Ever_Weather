@@ -10,6 +10,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Weather App",
       template: path.resolve(__dirname, "./src/template.html"),
+      favicon: `./src/svg/favicon.svg`,
     }),
     new HtmlWebpackInlineSVGPlugin({
       runPreEmit: true,
