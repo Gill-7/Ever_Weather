@@ -7,14 +7,15 @@
     <title>weather</title>
   </head>
   <body>
+    <div id="loader" class="center"></div>
     <div class="container">
       <main>
         <div class="weather-info">
           <div class="weather-info-left">
             <div class="weather-temp-container">
               <div class="weather-info__temperature"></div>
-              <span class="weather-info__degree">°</span>
-              <span class="weather-info__celcius">c</span>
+              <span style="display: none" class="weather-info__degree">°</span>
+              <span style="display: none" class="weather-info__celcius">c</span>
             </div>
             <div class="weather-info__temperature"></div>
             <div class="weather-info__city"></div>
@@ -27,7 +28,7 @@
             <img inline class="weather-info__icon" />
             <div class="weather-info__description"></div>
             <div>
-              <form class="form">
+              <form class="form" style="display: none">
                 <input
                   class="search-input"
                   type="text"
@@ -44,7 +45,7 @@
                   />
                 </button>
               </form>
-              <div class="error-msg">
+              <div style="display: none" class="error-msg">
                 Location not found <br />Please type again.
               </div>
             </div>
@@ -53,7 +54,7 @@
       </main>
 
       <section>
-        <div class="weather-details">
+        <div class="weather-details weather-details-temp" style="display: none">
           <img
             inline
             src="src/svg/temperature.svg"
@@ -66,7 +67,10 @@
             <h4 class="weather-feelslike"></h4>
           </div>
         </div>
-        <div class="weather-details">
+        <div
+          class="weather-details weather-details-speed"
+          style="display: none"
+        >
           <img
             inline
             src="src/svg/wind.svg"
@@ -79,7 +83,10 @@
             <h4 class="weather-speed"></h4>
           </div>
         </div>
-        <div class="weather-details">
+        <div
+          class="weather-details weather-details-humidity"
+          style="display: none"
+        >
           <img
             inline
             src="src/svg/humidity.svg"
@@ -92,7 +99,10 @@
             <h4 class="weather-humidity"></h4>
           </div>
         </div>
-        <div class="weather-details">
+        <div
+          class="weather-details weather-details-chance"
+          style="display: none"
+        >
           <img
             inline
             src="src/svg/currentIcon/rain.svg"
@@ -107,7 +117,7 @@
         </div>
       </section>
       <div class="forecast">
-        <div class="change-forecast">
+        <div class="change-forecast" style="display: none">
           <p class="daily-btn forecast-selected">Daily</p>
           <p class="hourly-btn">Hourly</p>
           <div class="change-hours">

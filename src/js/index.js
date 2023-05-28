@@ -14,6 +14,14 @@ import {
   changeHoursPage,
 } from "./apiDOM.js";
 
+// var image = document.images[0];
+// var downImg = new Image();
+// downImg.onload = function () {
+//   image.src = this.src;
+// };
+
+// downImg.src = "../svg/weather.jpg";
+
 const searchBtn = document.querySelector(".search-btn");
 const input = document.querySelector(".search-input");
 
@@ -28,6 +36,8 @@ const dots = document.querySelectorAll(".dot");
 let hoursPage = 1;
 
 document.querySelector("body").style.visibility = "hidden";
+
+document.querySelector("#loader").style.visibility = "visible";
 
 function getPosition() {
   return new Promise((resolve) => {
@@ -71,9 +81,20 @@ const getWeatherData = async (initialLoad = false) => {
 
     document.querySelector(".error-msg").style.visibility = "hidden";
 
+    renderWeatherInfo(data, cityName);
+
     document.querySelector("body").style.visibility = "visible";
 
-    renderWeatherInfo(data, cityName);
+    document.querySelector("#loader").style.visibility = "hidden";
+
+    document.querySelector(".weather-info__degree").style.display = "block";
+    document.querySelector(".weather-info__celcius").style.display = "block";
+    document.querySelector(".form").style.display = "block";
+    document.querySelector(".weather-details-temp").style.display = "flex";
+    document.querySelector(".weather-details-humidity").style.display = "flex";
+    document.querySelector(".weather-details-speed").style.display = "flex";
+    document.querySelector(".weather-details-chance").style.display = "flex";
+    document.querySelector(".change-forecast").style.display = "flex";
   } catch (err) {
     document.querySelector(".error-msg").style.visibility = "visible";
   }

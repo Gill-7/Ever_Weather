@@ -15,6 +15,10 @@ body {
   overflow-y: scroll;
 }
 
+.hidden {
+  display: none;
+}
+
 img {
   width: 40px;
 }
@@ -837,4 +841,30 @@ section {
 #hourly-time-23,
 #hourly-time-24 {
   display: none;
+}
+
+#loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #0b0b0b;
+  width: 35px;
+  height: 35px;
+  background-color: none;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid red;
 }
